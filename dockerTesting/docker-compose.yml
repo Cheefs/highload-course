@@ -1,0 +1,20 @@
+# Пропишем версию
+version: '3.3'
+# Перечислим сервисы
+services:
+    nginx:
+         build: ./docker/nginx
+         ports:
+          - 80:80
+         volumes:
+          - ./logs:/etc/logs/nginx
+          - ./www/:/var/www
+         environment:
+          - USER= nginx nginx
+         
+         links:
+          - fpm
+    fpm:
+         build: ./docker/fpm
+         volumes:
+          - ./www:/var/www

@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.hide {
+    display: none;
+}
+
+.header {
+    margin-left: 10px;
+}
+
+.header .input {
+    padding: 2px 10px;
+    font-weight: bold;
+    background-color: #FF9800;
+    border: none;
+    cursor: pointer;
+}
+
+.header .input:hover {
+    background-color: #49ff1c;
+}
+
+
+.list {
+    margin-left: 20px;
+}
+
+.file {
+    background-color: #fafafa;
+    border: none;
+    cursor: pointer;
+}
+.dir {
+    background-color: #fac372;
+    border: none;
+    cursor: pointer;
+}
+
+.dir:hover, .file:hover {
+    background-color: #49ff1c;
+ text-decoration: underline;
+}
+
+.preview {
+    position: absolute;
+    right: 20px;
+    top: 100px;
+    width: 700px;
+    height: 100%;
+}
+
+.preview .obj {
+    display: flex;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100%;
+    box-shadow: 10px 15px 4px 5px #949292dd;
+}

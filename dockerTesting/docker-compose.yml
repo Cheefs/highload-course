@@ -1,20 +1,19 @@
 # Пропишем версию
-version: '3.3'
+version: '3'
 # Перечислим сервисы
 services:
     nginx:
-         build: ./docker/nginx
+         image: nginx:latest
          ports:
           - 80:80
          volumes:
           - ./logs:/etc/logs/nginx
-          - ./www/:/var/www
-         environment:
-          - USER= nginx nginx
-         
+          - ./www/mysite:/var/www
+          - ./conf/nginx:/etc/nginx/conf.d
          links:
           - fpm
     fpm:
          build: ./docker/fpm
          volumes:
-          - ./www:/var/www
+          - ./www/mysite:/var/www
+          - ./logs:/etc/logs/php

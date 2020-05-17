@@ -1,0 +1,12 @@
+FROM php:fpm
+
+RUN apt-get update && apt-get install -y libonig-dev libpq-dev
+
+RUN docker-php-ext-install mbstring
+RUN docker-php-ext-install exif
+RUN docker-php-ext-install opcache
+RUN docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql \
+    && docker-php-ext-install pgsql pdo_pgsql
+
+EXPOSE 9000
+CMD ["php-fpm"]

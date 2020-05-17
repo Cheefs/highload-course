@@ -1,7 +1,9 @@
 {
     "require": {
         "twig/twig": "^2.0",
-      "ext-pdo": "*"
+      "ext-pdo": "*",
+      "monolog/monolog": "^2.0",
+      "ext-xdebug": "*"
     },
     "autoload": {
         "psr-4": {

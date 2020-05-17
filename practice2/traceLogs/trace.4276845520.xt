@@ -1,0 +1,501 @@
+TRACE START [2020-05-17 07:51:20]
+    0.0011     410896  +410896   -> {main}() W:\domains\localhost\public\index.php:0
+    0.0013     416056    +5160     -> include(W:\domains\localhost\common\Constants.php) W:\domains\localhost\public\index.php:3
+    0.0013     416056       +0       -> define('APP_NAME', 'app') W:\domains\localhost\common\Constants.php:2
+    0.0013     416080                >=> TRUE
+    0.0013     416080      +24       -> define('FILE_EXT', '.php') W:\domains\localhost\common\Constants.php:3
+    0.0013     416104                >=> TRUE
+    0.0014     416104      +24       -> define('CONTROLLER', 'Controller') W:\domains\localhost\common\Constants.php:4
+    0.0014     416128                >=> TRUE
+    0.0014     416128      +24       -> define('DEFAULT_CONTROLLER', 'default') W:\domains\localhost\common\Constants.php:5
+    0.0014     416152                >=> TRUE
+    0.0014     416152      +24       -> define('CONTROLLERS_PATH', 'app\\controllers\\') W:\domains\localhost\common\Constants.php:6
+    0.0014     416176                >=> TRUE
+    0.0014     416232      +80       -> define('ROOT', 'W:/domains/localhost/public/../') W:\domains\localhost\common\Constants.php:8
+    0.0015     416256                >=> TRUE
+    0.0015     416336     +104       -> define('AUTOLOAD', 'W:/domains/localhost/public/..//vendor/autoload.php') W:\domains\localhost\common\Constants.php:9
+    0.0015     416360                >=> TRUE
+    0.0015     416440     +104       -> define('MESSAGES', 'W:/domains/localhost/public/..//services/messages/') W:\domains\localhost\common\Constants.php:10
+    0.0015     416464                >=> TRUE
+    0.0015     416544     +104       -> define('TRANSLATE', 'W:/domains/localhost/public/..//services/Translate.php') W:\domains\localhost\common\Constants.php:11
+    0.0016     416568                >=> TRUE
+    0.0016     416568      +24       -> define('POST', 'POST') W:\domains\localhost\common\Constants.php:12
+    0.0016     416592                >=> TRUE
+    0.0017     413328    -3240     -> include(W:\domains\localhost\vendor\autoload.php) W:\domains\localhost\public\index.php:4
+    0.0020     427784   +14456       -> require_once(W:\domains\localhost\vendor\composer\autoload_real.php) W:\domains\localhost\vendor\autoload.php:5
+    0.0020     427352     -432       -> ComposerAutoloaderInitf78d9ceb8956234d1c65d25eea440314::getLoader() W:\domains\localhost\vendor\autoload.php:7
+    0.0020     427352       +0         -> spl_autoload_register(array (0 => 'ComposerAutoloaderInitf78d9ceb8956234d1c65d25eea440314', 1 => 'loadClassLoader'), TRUE, TRUE) W:\domains\localhost\vendor\composer\autoload_real.php:22
+    0.0020     427872                  >=> TRUE
+ 
+	//// Так как подключен шаблонизатор, и много зависимостей, файл был слишком огромный 350мб, поэтому удилил частично, чтоб было видно что требования дз сделаны
+
+
+   10.9075    3048976    -1400               -> spl_autoload_call('Monolog\\Utils') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Handler\FormattableHandlerTrait.php:59
+   10.9075    3049016      +40                 -> Composer\Autoload\ClassLoader->loadClass($class = 'Monolog\\Utils') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Handler\FormattableHandlerTrait.php:59
+   10.9075    3049016       +0                   -> Composer\Autoload\ClassLoader->findFile($class = 'Monolog\\Utils') W:\domains\localhost\vendor\composer\ClassLoader.php:321
+   10.9075    3049016       +0                     -> Composer\Autoload\ClassLoader->findFileWithExtension($class = 'Monolog\\Utils', $ext = '.php') W:\domains\localhost\vendor\composer\ClassLoader.php:351
+   10.9075    3049016       +0                       -> strtr('Monolog\\Utils', '\\', '\\') W:\domains\localhost\vendor\composer\ClassLoader.php:373
+   10.9076    3049056                                >=> 'Monolog\\Utils'
+   10.9076    3049064      +48                       -> strrpos('Monolog\\Utils', '\\') W:\domains\localhost\vendor\composer\ClassLoader.php:378
+   10.9076    3049064                                >=> 7
+   10.9076    3049064       +0                       -> substr('Monolog\\Utils', 0, 7) W:\domains\localhost\vendor\composer\ClassLoader.php:379
+   10.9076    3049096                                >=> 'Monolog'
+   10.9076    3049136      +72                       -> substr('Monolog\\Utils.php', 8) W:\domains\localhost\vendor\composer\ClassLoader.php:382
+   10.9076    3049176                                >=> 'Utils.php'
+   10.9077    3049288     +152                       -> file_exists('W:\\domains\\localhost\\vendor\\composer/../monolog/monolog/src/Monolog\\Utils.php') W:\domains\localhost\vendor\composer\ClassLoader.php:384
+   10.9077    3049288                                >=> TRUE
+   10.9078    3049128                              >=> 'W:\\domains\\localhost\\vendor\\composer/../monolog/monolog/src/Monolog\\Utils.php'
+   10.9078    3049128                            >=> 'W:\\domains\\localhost\\vendor\\composer/../monolog/monolog/src/Monolog\\Utils.php'
+   10.9078    3049128     -160                   -> Composer\Autoload\includeFile($file = 'W:\\domains\\localhost\\vendor\\composer/../monolog/monolog/src/Monolog\\Utils.php') W:\domains\localhost\vendor\composer\ClassLoader.php:322
+   10.9080    3073312   +24184                     -> include(W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Utils.php) W:\domains\localhost\vendor\composer\ClassLoader.php:444
+   10.9081    3072768                          >=> TRUE
+   10.9081    3072728                        >=> NULL
+   10.9081    3072392     -920               -> Monolog\Formatter\LineFormatter->__construct($format = ???, $dateFormat = ???, $allowInlineLineBreaks = ???, $ignoreEmptyContextAndExtra = ???) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Handler\FormattableHandlerTrait.php:59
+   10.9082    3072392       +0                 -> Monolog\Formatter\LineFormatter->__construct($dateFormat = NULL) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:44
+   10.9082    3072392       +0                   -> function_exists('json_encode') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:39
+   10.9082    3072392                            >=> TRUE
+   10.9083    3072392                      >=> class Monolog\Formatter\LineFormatter { protected $format = '[%datetime%] %channel%.%level_name%: %message% %context% %extra%\n'; protected $allowInlineLineBreaks = FALSE; protected $ignoreEmptyContextAndExtra = FALSE; protected $includeStacktraces = NULL; protected $dateFormat = 'Y-m-d\\TH:i:sP'; protected $maxNormalizeDepth = 9; protected $maxNormalizeItemCount = 1000; private ${Monolog\Formatter\NormalizerFormatter}jsonEncodeOptions = 1344 }
+   10.9083    3072768                    >=> class Monolog\Formatter\LineFormatter { protected $format = '[%datetime%] %channel%.%level_name%: %message% %context% %extra%\n'; protected $allowInlineLineBreaks = FALSE; protected $ignoreEmptyContextAndExtra = FALSE; protected $includeStacktraces = NULL; protected $dateFormat = 'Y-m-d\\TH:i:sP'; protected $maxNormalizeDepth = 9; protected $maxNormalizeItemCount = 1000; private ${Monolog\Formatter\NormalizerFormatter}jsonEncodeOptions = 1344 }
+   10.9083    3072768     +376           -> Monolog\Formatter\LineFormatter->format($record = array ('message' => 'app start', 'context' => array (0 => 'time spent: 0.11058 milliseconds'), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'app', 'datetime' => class Monolog\DateTimeImmutable { private $useMicroseconds = TRUE; public $date = '2020-05-17 10:51:31.600886'; public $timezone_type = 3; public $timezone = 'Europe/Moscow' }, 'extra' => array ())) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Handler\AbstractProcessingHandler.php:40
+   10.9083    3072768       +0             -> Monolog\Formatter\LineFormatter->format($record = array ('message' => 'app start', 'context' => array (0 => 'time spent: 0.11058 milliseconds'), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'app', 'datetime' => class Monolog\DateTimeImmutable { private $useMicroseconds = TRUE; public $date = '2020-05-17 10:51:31.600886'; public $timezone_type = 3; public $timezone = 'Europe/Moscow' }, 'extra' => array ())) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:70
+   10.9084    3072768       +0               -> Monolog\Formatter\LineFormatter->normalize($data = array ('message' => 'app start', 'context' => array (0 => 'time spent: 0.11058 milliseconds'), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'app', 'datetime' => class Monolog\DateTimeImmutable { private $useMicroseconds = TRUE; public $date = '2020-05-17 10:51:31.600886'; public $timezone_type = 3; public $timezone = 'Europe/Moscow' }, 'extra' => array ()), $depth = ???) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:49
+   10.9084    3072768       +0                 -> is_scalar(array ('message' => 'app start', 'context' => array (0 => 'time spent: 0.11058 milliseconds'), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'app', 'datetime' => class Monolog\DateTimeImmutable { private $useMicroseconds = TRUE; public $date = '2020-05-17 10:51:31.600886'; public $timezone_type = 3; public $timezone = 'Europe/Moscow' }, 'extra' => array ())) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:118
+   10.9084    3072768                          >=> FALSE
+   10.9084    3072768       +0                 -> is_array(array ('message' => 'app start', 'context' => array (0 => 'time spent: 0.11058 milliseconds'), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'app', 'datetime' => class Monolog\DateTimeImmutable { private $useMicroseconds = TRUE; public $date = '2020-05-17 10:51:31.600886'; public $timezone_type = 3; public $timezone = 'Europe/Moscow' }, 'extra' => array ())) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:131
+   10.9085    3072768                          >=> TRUE
+   10.9085    3072768       +0                 -> Monolog\Formatter\LineFormatter->normalize($data = 'app start', $depth = 1) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:141
+   10.9085    3072768       +0                   -> is_scalar('app start') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:118
+   10.9085    3072768                            >=> TRUE
+   10.9085    3072768       +0                   -> is_float('app start') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:119
+   10.9086    3072768                            >=> FALSE
+   10.9086    3072768                          >=> 'app start'
+   10.9086    3073144     +376                 -> Monolog\Formatter\LineFormatter->normalize($data = array (0 => 'time spent: 0.11058 milliseconds'), $depth = 1) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:141
+   10.9086    3073144       +0                   -> is_scalar(array (0 => 'time spent: 0.11058 milliseconds')) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:118
+   10.9087    3073144                            >=> FALSE
+   10.9087    3073144       +0                   -> is_array(array (0 => 'time spent: 0.11058 milliseconds')) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:131
+   10.9087    3073144                            >=> TRUE
+   10.9087    3073144       +0                   -> Monolog\Formatter\LineFormatter->normalize($data = 'time spent: 0.11058 milliseconds', $depth = 2) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:141
+   10.9087    3073144       +0                     -> is_scalar('time spent: 0.11058 milliseconds') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:118
+   10.9088    3073144                              >=> TRUE
+   10.9088    3073144       +0                     -> is_float('time spent: 0.11058 milliseconds') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:119
+   10.9088    3073144                              >=> FALSE
+   10.9088    3073144                            >=> 'time spent: 0.11058 milliseconds'
+   10.9088    3073520                          >=> array (0 => 'time spent: 0.11058 milliseconds')
+   10.9088    3073520     +376                 -> Monolog\Formatter\LineFormatter->normalize($data = 100, $depth = 1) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:141
+   10.9089    3073520       +0                   -> is_scalar(100) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:118
+   10.9089    3073520                            >=> TRUE
+   10.9089    3073520       +0                   -> is_float(100) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:119
+   10.9089    3073520                            >=> FALSE
+   10.9090    3073520                          >=> 100
+   10.9090    3073520       +0                 -> Monolog\Formatter\LineFormatter->normalize($data = 'DEBUG', $depth = 1) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:141
+   10.9090    3073520       +0                   -> is_scalar('DEBUG') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:118
+   10.9090    3073520                            >=> TRUE
+   10.9090    3073520       +0                   -> is_float('DEBUG') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:119
+   10.9090    3073520                            >=> FALSE
+   10.9091    3073520                          >=> 'DEBUG'
+   10.9091    3073520       +0                 -> Monolog\Formatter\LineFormatter->normalize($data = 'app', $depth = 1) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:141
+   10.9091    3073520       +0                   -> is_scalar('app') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:118
+   10.9091    3073520                            >=> TRUE
+   10.9091    3073520       +0                   -> is_float('app') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:119
+   10.9092    3073520                            >=> FALSE
+   10.9092    3073520                          >=> 'app'
+   10.9092    3073520       +0                 -> Monolog\Formatter\LineFormatter->normalize($data = class Monolog\DateTimeImmutable { private $useMicroseconds = TRUE; public $date = '2020-05-17 10:51:31.600886'; public $timezone_type = 3; public $timezone = 'Europe/Moscow' }, $depth = 1) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:141
+   10.9092    3073520       +0                   -> is_scalar(class Monolog\DateTimeImmutable { private $useMicroseconds = TRUE; public $date = '2020-05-17 10:51:31.600886'; public $timezone_type = 3; public $timezone = 'Europe/Moscow' }) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:118
+   10.9093    3073520                            >=> FALSE
+   10.9093    3073520       +0                   -> is_array(class Monolog\DateTimeImmutable { private $useMicroseconds = TRUE; public $date = '2020-05-17 10:51:31.600886'; public $timezone_type = 3; public $timezone = 'Europe/Moscow' }) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:131
+   10.9093    3073520                            >=> FALSE
+   10.9093    3073520       +0                   -> Monolog\Formatter\LineFormatter->formatDate($date = class Monolog\DateTimeImmutable { private $useMicroseconds = TRUE; public $date = '2020-05-17 10:51:31.600886'; public $timezone_type = 3; public $timezone = 'Europe/Moscow' }) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:148
+   10.9093    3073520       +0                     -> Monolog\DateTimeImmutable->__toString() W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:241
+   10.9093    3073520       +0                       -> Monolog\DateTimeImmutable->jsonSerialize() W:\domains\localhost\vendor\monolog\monolog\src\Monolog\DateTimeImmutable.php:47
+   10.9093    3073520       +0                         -> Monolog\DateTimeImmutable->format('Y-m-d\\TH:i:s.uP') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\DateTimeImmutable.php:39
+   10.9094    3073776                                  >=> '2020-05-17T10:51:31.600886+03:00'
+   10.9094    3073776                                >=> '2020-05-17T10:51:31.600886+03:00'
+   10.9094    3073776                              >=> '2020-05-17T10:51:31.600886+03:00'
+   10.9094    3073776                            >=> '2020-05-17T10:51:31.600886+03:00'
+   10.9095    3073776                          >=> '2020-05-17T10:51:31.600886+03:00'
+   10.9095    3073776     +256                 -> Monolog\Formatter\LineFormatter->normalize($data = array (), $depth = 1) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:141
+   10.9095    3073776       +0                   -> is_scalar(array ()) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:118
+   10.9095    3073776                            >=> FALSE
+   10.9095    3073776       +0                   -> is_array(array ()) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:131
+   10.9096    3073776                            >=> TRUE
+   10.9096    3073776                          >=> array ()
+   10.9096    3073776                        >=> array ('message' => 'app start', 'context' => array (0 => 'time spent: 0.11058 milliseconds'), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'app', 'datetime' => '2020-05-17T10:51:31.600886+03:00', 'extra' => array ())
+   10.9097    3073776                      >=> array ('message' => 'app start', 'context' => array (0 => 'time spent: 0.11058 milliseconds'), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'app', 'datetime' => '2020-05-17T10:51:31.600886+03:00', 'extra' => array ())
+   10.9097    3073816      +40             -> strpos('[%datetime%] %channel%.%level_name%: %message% %context% %extra%\n', '%context.0%') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:82
+   10.9097    3073816                      >=> FALSE
+   10.9097    3073816       +0             -> strpos('[%datetime%] %channel%.%level_name%: %message% %context% %extra%\n', '%message%') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:101
+   10.9097    3073816                      >=> 37
+   10.9097    3073816       +0             -> Monolog\Formatter\LineFormatter->stringify($value = 'app start') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:102
+   10.9098    3073816       +0               -> Monolog\Formatter\LineFormatter->convertToString($data = 'app start') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:126
+   10.9098    3073816       +0                 -> is_bool('app start') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:147
+   10.9098    3073816                          >=> FALSE
+   10.9098    3073816       +0                 -> is_scalar('app start') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:151
+   10.9098    3073816                          >=> TRUE
+   10.9098    3073816                        >=> 'app start'
+   10.9098    3073816       +0               -> Monolog\Formatter\LineFormatter->replaceNewlines($str = 'app start') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:126
+   10.9099    3073816       +0                 -> str_replace(array (0 => '\r\n', 1 => '\r', 2 => '\n'), ' ', 'app start') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:168
+   10.9099    3073816                          >=> 'app start'
+   10.9099    3073816                        >=> 'app start'
+   10.9099    3073816                      >=> 'app start'
+   10.9099    3073816       +0             -> str_replace('%message%', 'app start', '[%datetime%] %channel%.%level_name%: %message% %context% %extra%\n') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:102
+   10.9100    3073912                      >=> '[%datetime%] %channel%.%level_name%: app start %context% %extra%\n'
+   10.9100    3073912      +96             -> strpos('[%datetime%] %channel%.%level_name%: app start %context% %extra%\n', '%context%') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:101
+   10.9100    3073912                      >=> 47
+   10.9100    3073912       +0             -> Monolog\Formatter\LineFormatter->stringify($value = array (0 => 'time spent: 0.11058 milliseconds')) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:102
+   10.9100    3073912       +0               -> Monolog\Formatter\LineFormatter->convertToString($data = array (0 => 'time spent: 0.11058 milliseconds')) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:126
+   10.9100    3073912       +0                 -> is_bool(array (0 => 'time spent: 0.11058 milliseconds')) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:147
+   10.9101    3073912                          >=> FALSE
+   10.9101    3073912       +0                 -> is_scalar(array (0 => 'time spent: 0.11058 milliseconds')) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:151
+   10.9101    3073912                          >=> FALSE
+   10.9101    3073912       +0                 -> Monolog\Formatter\LineFormatter->toJson($data = array (0 => 'time spent: 0.11058 milliseconds'), $ignoreErrors = TRUE) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:155
+   10.9101    3073912       +0                   -> Monolog\Utils::jsonEncode($data = array (0 => 'time spent: 0.11058 milliseconds'), $encodeFlags = 1344, $ignoreErrors = TRUE) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:233
+   10.9102    3074288     +376                     -> json_encode(array (0 => 'time spent: 0.11058 milliseconds'), 1344) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Utils.php:53
+   10.9102    3074544                              >=> '["time spent: 0.11058 milliseconds"]'
+   10.9102    3074544                            >=> '["time spent: 0.11058 milliseconds"]'
+   10.9102    3074544                          >=> '["time spent: 0.11058 milliseconds"]'
+   10.9103    3074544                        >=> '["time spent: 0.11058 milliseconds"]'
+   10.9103    3074544     +256               -> Monolog\Formatter\LineFormatter->replaceNewlines($str = '["time spent: 0.11058 milliseconds"]') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:126
+   10.9103    3074544       +0                 -> str_replace(array (0 => '\r\n', 1 => '\r', 2 => '\n'), ' ', '["time spent: 0.11058 milliseconds"]') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:168
+   10.9103    3074544                          >=> '["time spent: 0.11058 milliseconds"]'
+   10.9103    3074544                        >=> '["time spent: 0.11058 milliseconds"]'
+   10.9104    3074544                      >=> '["time spent: 0.11058 milliseconds"]'
+   10.9104    3074544       +0             -> str_replace('%context%', '["time spent: 0.11058 milliseconds"]', '[%datetime%] %channel%.%level_name%: app start %context% %extra%\n') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:102
+   10.9104    3074672                      >=> '[%datetime%] %channel%.%level_name%: app start ["time spent: 0.11058 milliseconds"] %extra%\n'
+   10.9104    3074312     -232             -> strpos('[%datetime%] %channel%.%level_name%: app start ["time spent: 0.11058 milliseconds"] %extra%\n', '%level%') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:101
+   10.9104    3074312                      >=> FALSE
+   10.9104    3074320       +8             -> strpos('[%datetime%] %channel%.%level_name%: app start ["time spent: 0.11058 milliseconds"] %extra%\n', '%level_name%') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:101
+   10.9105    3074320                      >=> 23
+   10.9105    3074320       +0             -> Monolog\Formatter\LineFormatter->stringify($value = 'DEBUG') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:102
+   10.9105    3074320       +0               -> Monolog\Formatter\LineFormatter->convertToString($data = 'DEBUG') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:126
+   10.9105    3074320       +0                 -> is_bool('DEBUG') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:147
+   10.9105    3074320                          >=> FALSE
+   10.9105    3074320       +0                 -> is_scalar('DEBUG') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:151
+   10.9106    3074320                          >=> TRUE
+   10.9106    3074320                        >=> 'DEBUG'
+   10.9106    3074320       +0               -> Monolog\Formatter\LineFormatter->replaceNewlines($str = 'DEBUG') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:126
+   10.9106    3074320       +0                 -> str_replace(array (0 => '\r\n', 1 => '\r', 2 => '\n'), ' ', 'DEBUG') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:168
+   10.9106    3074320                          >=> 'DEBUG'
+   10.9106    3074320                        >=> 'DEBUG'
+   10.9107    3074320                      >=> 'DEBUG'
+   10.9107    3074320       +0             -> str_replace('%level_name%', 'DEBUG', '[%datetime%] %channel%.%level_name%: app start ["time spent: 0.11058 milliseconds"] %extra%\n') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:102
+   10.9107    3074432                      >=> '[%datetime%] %channel%.DEBUG: app start ["time spent: 0.11058 milliseconds"] %extra%\n'
+   10.9107    3074304      -16             -> strpos('[%datetime%] %channel%.DEBUG: app start ["time spent: 0.11058 milliseconds"] %extra%\n', '%channel%') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:101
+   10.9107    3074304                      >=> 13
+   10.9107    3074304       +0             -> Monolog\Formatter\LineFormatter->stringify($value = 'app') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:102
+   10.9108    3074304       +0               -> Monolog\Formatter\LineFormatter->convertToString($data = 'app') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:126
+   10.9108    3074304       +0                 -> is_bool('app') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:147
+   10.9108    3074304                          >=> FALSE
+   10.9108    3074304       +0                 -> is_scalar('app') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:151
+   10.9108    3074304                          >=> TRUE
+   10.9108    3074304                        >=> 'app'
+   10.9109    3074304       +0               -> Monolog\Formatter\LineFormatter->replaceNewlines($str = 'app') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:126
+   10.9109    3074304       +0                 -> str_replace(array (0 => '\r\n', 1 => '\r', 2 => '\n'), ' ', 'app') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:168
+   10.9109    3074304                          >=> 'app'
+   10.9109    3074304                        >=> 'app'
+   10.9110    3074304                      >=> 'app'
+   10.9110    3074304       +0             -> str_replace('%channel%', 'app', '[%datetime%] %channel%.DEBUG: app start ["time spent: 0.11058 milliseconds"] %extra%\n') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:102
+   10.9110    3074416                      >=> '[%datetime%] app.DEBUG: app start ["time spent: 0.11058 milliseconds"] %extra%\n'
+   10.9110    3074304       +0             -> strpos('[%datetime%] app.DEBUG: app start ["time spent: 0.11058 milliseconds"] %extra%\n', '%datetime%') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:101
+   10.9110    3074304                      >=> 1
+   10.9110    3074304       +0             -> Monolog\Formatter\LineFormatter->stringify($value = '2020-05-17T10:51:31.600886+03:00') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:102
+   10.9110    3074304       +0               -> Monolog\Formatter\LineFormatter->convertToString($data = '2020-05-17T10:51:31.600886+03:00') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:126
+   10.9111    3074304       +0                 -> is_bool('2020-05-17T10:51:31.600886+03:00') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:147
+   10.9111    3074304                          >=> FALSE
+   10.9111    3074304       +0                 -> is_scalar('2020-05-17T10:51:31.600886+03:00') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:151
+   10.9111    3074304                          >=> TRUE
+   10.9111    3074304                        >=> '2020-05-17T10:51:31.600886+03:00'
+   10.9111    3074304       +0               -> Monolog\Formatter\LineFormatter->replaceNewlines($str = '2020-05-17T10:51:31.600886+03:00') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:126
+   10.9112    3074304       +0                 -> str_replace(array (0 => '\r\n', 1 => '\r', 2 => '\n'), ' ', '2020-05-17T10:51:31.600886+03:00') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:168
+   10.9112    3074304                          >=> '2020-05-17T10:51:31.600886+03:00'
+   10.9112    3074304                        >=> '2020-05-17T10:51:31.600886+03:00'
+   10.9113    3074304                      >=> '2020-05-17T10:51:31.600886+03:00'
+   10.9113    3074304       +0             -> str_replace('%datetime%', '2020-05-17T10:51:31.600886+03:00', '[%datetime%] app.DEBUG: app start ["time spent: 0.11058 milliseconds"] %extra%\n') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:102
+   10.9113    3074432                      >=> '[2020-05-17T10:51:31.600886+03:00] app.DEBUG: app start ["time spent: 0.11058 milliseconds"] %extra%\n'
+   10.9113    3074312       +8             -> strpos('[2020-05-17T10:51:31.600886+03:00] app.DEBUG: app start ["time spent: 0.11058 milliseconds"] %extra%\n', '%extra%') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:101
+   10.9113    3074312                      >=> 93
+   10.9113    3074312       +0             -> Monolog\Formatter\LineFormatter->stringify($value = array ()) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:102
+   10.9114    3074312       +0               -> Monolog\Formatter\LineFormatter->convertToString($data = array ()) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:126
+   10.9114    3074312       +0                 -> is_bool(array ()) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:147
+   10.9114    3074312                          >=> FALSE
+   10.9114    3074312       +0                 -> is_scalar(array ()) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:151
+   10.9114    3074312                          >=> FALSE
+   10.9114    3074312       +0                 -> Monolog\Formatter\LineFormatter->toJson($data = array (), $ignoreErrors = TRUE) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:155
+   10.9114    3074312       +0                   -> Monolog\Utils::jsonEncode($data = array (), $encodeFlags = 1344, $ignoreErrors = TRUE) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:233
+   10.9115    3074312       +0                     -> json_encode(array (), 1344) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Utils.php:53
+   10.9115    3074568                              >=> '[]'
+   10.9115    3074568                            >=> '[]'
+   10.9115    3074568                          >=> '[]'
+   10.9116    3074568                        >=> '[]'
+   10.9116    3074568     +256               -> Monolog\Formatter\LineFormatter->replaceNewlines($str = '[]') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:126
+   10.9116    3074568       +0                 -> str_replace(array (0 => '\r\n', 1 => '\r', 2 => '\n'), ' ', '[]') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:168
+   10.9116    3074568                          >=> '[]'
+   10.9116    3074568                        >=> '[]'
+   10.9116    3074568                      >=> '[]'
+   10.9117    3074568       +0             -> str_replace('%extra%', '[]', '[2020-05-17T10:51:31.600886+03:00] app.DEBUG: app start ["time spent: 0.11058 milliseconds"] %extra%\n') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:102
+   10.9117    3074696                      >=> '[2020-05-17T10:51:31.600886+03:00] app.DEBUG: app start ["time spent: 0.11058 milliseconds"] []\n'
+   10.9117    3074280     -288             -> strpos('[2020-05-17T10:51:31.600886+03:00] app.DEBUG: app start ["time spent: 0.11058 milliseconds"] []\n', '%') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:107
+   10.9117    3074280                      >=> FALSE
+   10.9118    3073272                    >=> '[2020-05-17T10:51:31.600886+03:00] app.DEBUG: app start ["time spent: 0.11058 milliseconds"] []\n'
+   10.9118    3073648     -632           -> Monolog\Handler\StreamHandler->write($record = array ('message' => 'app start', 'context' => array (0 => 'time spent: 0.11058 milliseconds'), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'app', 'datetime' => class Monolog\DateTimeImmutable { private $useMicroseconds = TRUE; public $date = '2020-05-17 10:51:31.600886'; public $timezone_type = 3; public $timezone = 'Europe/Moscow' }, 'extra' => array (), 'formatted' => '[2020-05-17T10:51:31.600886+03:00] app.DEBUG: app start ["time spent: 0.11058 milliseconds"] []\n')) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Handler\AbstractProcessingHandler.php:42
+   10.9118    3073648       +0             -> is_resource(NULL) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Handler\StreamHandler.php:95
+   10.9118    3073648                      >=> FALSE
+   10.9119    3073648       +0             -> Monolog\Handler\StreamHandler->createDir() W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Handler\StreamHandler.php:99
+   10.9119    3073648       +0               -> Monolog\Handler\StreamHandler->getDirFromStream($stream = 'log/app.log') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Handler\StreamHandler.php:164
+   10.9119    3073648       +0                 -> strpos('log/app.log', '://') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Handler\StreamHandler.php:145
+   10.9119    3073648                          >=> FALSE
+   10.9119    3073648       +0                 -> dirname('log/app.log') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Handler\StreamHandler.php:147
+   10.9119    3073688                          >=> 'log'
+   10.9120    3073688                        >=> 'log'
+   10.9120    3073688      +40               -> is_dir('log') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Handler\StreamHandler.php:165
+   10.9120    3073640                        >=> TRUE
+   10.9121    3073976     +288             -> set_error_handler(array (0 => class Monolog\Handler\StreamHandler { protected $stream = NULL; protected $url = 'log/app.log'; private $errorMessage = NULL; protected $filePermission = NULL; protected $useLocking = FALSE; private $dirCreated = TRUE; protected $level = 100; protected $bubble = TRUE; protected $processors = array (); protected $formatter = class Monolog\Formatter\LineFormatter { protected $format = '[%datetime%] %channel%.%level_name%: %message% %context% %extra%\n'; protected $allowInlineLineBreaks = FALSE; protected $ignoreEmptyContextAndExtra = FALSE; protected $includeStacktraces = NULL; protected $dateFormat = 'Y-m-d\\TH:i:sP'; protected $maxNormalizeDepth = 9; protected $maxNormalizeItemCount = 1000; private ${Monolog\Formatter\NormalizerFormatter}jsonEncodeOptions = 1344 } }, 1 => 'customErrorHandler')) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Handler\StreamHandler.php:101
+   10.9121    3073976                      >=> NULL
+   10.9121    3073976       +0             -> fopen('log/app.log', 'a') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Handler\StreamHandler.php:102
+   10.9122    3074352                      >=> resource(109) of type (stream)
+   10.9122    3074352     +376             -> restore_error_handler() W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Handler\StreamHandler.php:106
+   10.9122    3073976                      >=> TRUE
+   10.9122    3073976     -376             -> is_resource(resource(109) of type (stream)) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Handler\StreamHandler.php:107
+   10.9123    3073976                      >=> TRUE
+   10.9123    3073976       +0             -> Monolog\Handler\StreamHandler->streamWrite($stream = resource(109) of type (stream), $record = array ('message' => 'app start', 'context' => array (0 => 'time spent: 0.11058 milliseconds'), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'app', 'datetime' => class Monolog\DateTimeImmutable { private $useMicroseconds = TRUE; public $date = '2020-05-17 10:51:31.600886'; public $timezone_type = 3; public $timezone = 'Europe/Moscow' }, 'extra' => array (), 'formatted' => '[2020-05-17T10:51:31.600886+03:00] app.DEBUG: app start ["time spent: 0.11058 milliseconds"] []\n')) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Handler\StreamHandler.php:119
+   10.9123    3073976       +0               -> fwrite(resource(109) of type (stream), '[2020-05-17T10:51:31.600886+03:00] app.DEBUG: app start ["time spent: 0.11058 milliseconds"] []\n') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Handler\StreamHandler.php:133
+   10.9124    3073976                        >=> 96
+   10.9125    3073472                  >=> FALSE
+   10.9125    3073472     -504         -> next(array (0 => class Monolog\Handler\StreamHandler { protected $stream = resource(109) of type (stream); protected $url = 'log/app.log'; private $errorMessage = NULL; protected $filePermission = NULL; protected $useLocking = FALSE; private $dirCreated = TRUE; protected $level = 100; protected $bubble = TRUE; protected $processors = array (); protected $formatter = class Monolog\Formatter\LineFormatter { protected $format = '[%datetime%] %channel%.%level_name%: %message% %context% %extra%\n'; protected $allowInlineLineBreaks = FALSE; protected $ignoreEmptyContextAndExtra = FALSE; protected $includeStacktraces = NULL; protected $dateFormat = 'Y-m-d\\TH:i:sP'; protected $maxNormalizeDepth = 9; protected $maxNormalizeItemCount = 1000; private ${Monolog\Formatter\NormalizerFormatter}jsonEncodeOptions = 1344 } })) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Logger.php:327
+   10.9125    3073472                  >=> NULL
+   10.9125    3073472       +0         -> current(array (0 => class Monolog\Handler\StreamHandler { protected $stream = resource(109) of type (stream); protected $url = 'log/app.log'; private $errorMessage = NULL; protected $filePermission = NULL; protected $useLocking = FALSE; private $dirCreated = TRUE; protected $level = 100; protected $bubble = TRUE; protected $processors = array (); protected $formatter = class Monolog\Formatter\LineFormatter { protected $format = '[%datetime%] %channel%.%level_name%: %message% %context% %extra%\n'; protected $allowInlineLineBreaks = FALSE; protected $ignoreEmptyContextAndExtra = FALSE; protected $includeStacktraces = NULL; protected $dateFormat = 'Y-m-d\\TH:i:sP'; protected $maxNormalizeDepth = 9; protected $maxNormalizeItemCount = 1000; private ${Monolog\Formatter\NormalizerFormatter}jsonEncodeOptions = 1344 } })) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Logger.php:322
+   10.9126    3073472                  >=> FALSE
+   10.9126    3071272    -2200     -> memory_get_usage() W:\domains\localhost\public\index.php:41
+   10.9126    3071272              >=> 3071272
+   10.9126    3071736     +464     -> sprintf('diff: %s', 2536056) W:\domains\localhost\public\index.php:46
+   10.9127    3072056              >=> 'diff: 2536056'
+   10.9127    3072056     +320     -> Monolog\Logger->debug($message = 'memory usage', $context = array (0 => 'before launch: 535216', 1 => 'after: 3071272', 2 => 'diff: 2536056')) W:\domains\localhost\public\index.php:46
+   10.9127    3072056       +0       -> Monolog\Logger->addRecord($level = 100, $message = 'memory usage', $context = array (0 => 'before launch: 535216', 1 => 'after: 3071272', 2 => 'diff: 2536056')) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Logger.php:489
+   10.9127    3072432     +376         -> Monolog\Handler\StreamHandler->isHandling($record = array ('level' => 100)) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Logger.php:289
+   10.9128    3072056                  >=> TRUE
+   10.9128    3072056     -376         -> Monolog\Logger::getLevelName($level = 100) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Logger.php:299
+   10.9128    3072056                  >=> 'DEBUG'
+   10.9128    3072512     +456         -> Monolog\DateTimeImmutable->__construct($useMicroseconds = TRUE, $timezone = class DateTimeZone { public $timezone_type = 3; public $timezone = 'Europe/Moscow' }) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Logger.php:307
+   10.9128    3072512       +0           -> Monolog\DateTimeImmutable->__construct('now', class DateTimeZone { public $timezone_type = 3; public $timezone = 'Europe/Moscow' }) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\DateTimeImmutable.php:33
+   10.9128    3072776                    >=> NULL
+   10.9129    3072776     +264         -> reset(array (0 => class Monolog\Handler\StreamHandler { protected $stream = resource(109) of type (stream); protected $url = 'log/app.log'; private $errorMessage = NULL; protected $filePermission = NULL; protected $useLocking = FALSE; private $dirCreated = TRUE; protected $level = 100; protected $bubble = TRUE; protected $processors = array (); protected $formatter = class Monolog\Formatter\LineFormatter { protected $format = '[%datetime%] %channel%.%level_name%: %message% %context% %extra%\n'; protected $allowInlineLineBreaks = FALSE; protected $ignoreEmptyContextAndExtra = FALSE; protected $includeStacktraces = NULL; protected $dateFormat = 'Y-m-d\\TH:i:sP'; protected $maxNormalizeDepth = 9; protected $maxNormalizeItemCount = 1000; private ${Monolog\Formatter\NormalizerFormatter}jsonEncodeOptions = 1344 } })) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Logger.php:317
+   10.9129    3072776                  >=> NULL
+   10.9129    3072776       +0         -> key(array (0 => class Monolog\Handler\StreamHandler { protected $stream = resource(109) of type (stream); protected $url = 'log/app.log'; private $errorMessage = NULL; protected $filePermission = NULL; protected $useLocking = FALSE; private $dirCreated = TRUE; protected $level = 100; protected $bubble = TRUE; protected $processors = array (); protected $formatter = class Monolog\Formatter\LineFormatter { protected $format = '[%datetime%] %channel%.%level_name%: %message% %context% %extra%\n'; protected $allowInlineLineBreaks = FALSE; protected $ignoreEmptyContextAndExtra = FALSE; protected $includeStacktraces = NULL; protected $dateFormat = 'Y-m-d\\TH:i:sP'; protected $maxNormalizeDepth = 9; protected $maxNormalizeItemCount = 1000; private ${Monolog\Formatter\NormalizerFormatter}jsonEncodeOptions = 1344 } })) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Logger.php:318
+   10.9130    3072776                  >=> 0
+   10.9130    3072776       +0         -> current(array (0 => class Monolog\Handler\StreamHandler { protected $stream = resource(109) of type (stream); protected $url = 'log/app.log'; private $errorMessage = NULL; protected $filePermission = NULL; protected $useLocking = FALSE; private $dirCreated = TRUE; protected $level = 100; protected $bubble = TRUE; protected $processors = array (); protected $formatter = class Monolog\Formatter\LineFormatter { protected $format = '[%datetime%] %channel%.%level_name%: %message% %context% %extra%\n'; protected $allowInlineLineBreaks = FALSE; protected $ignoreEmptyContextAndExtra = FALSE; protected $includeStacktraces = NULL; protected $dateFormat = 'Y-m-d\\TH:i:sP'; protected $maxNormalizeDepth = 9; protected $maxNormalizeItemCount = 1000; private ${Monolog\Formatter\NormalizerFormatter}jsonEncodeOptions = 1344 } })) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Logger.php:322
+   10.9130    3072776                  >=> class Monolog\Handler\StreamHandler { protected $stream = resource(109) of type (stream); protected $url = 'log/app.log'; private $errorMessage = NULL; protected $filePermission = NULL; protected $useLocking = FALSE; private $dirCreated = TRUE; protected $level = 100; protected $bubble = TRUE; protected $processors = array (); protected $formatter = class Monolog\Formatter\LineFormatter { protected $format = '[%datetime%] %channel%.%level_name%: %message% %context% %extra%\n'; protected $allowInlineLineBreaks = FALSE; protected $ignoreEmptyContextAndExtra = FALSE; protected $includeStacktraces = NULL; protected $dateFormat = 'Y-m-d\\TH:i:sP'; protected $maxNormalizeDepth = 9; protected $maxNormalizeItemCount = 1000; private ${Monolog\Formatter\NormalizerFormatter}jsonEncodeOptions = 1344 } }
+   10.9130    3072776       +0         -> Monolog\Handler\StreamHandler->handle($record = array ('message' => 'memory usage', 'context' => array (0 => 'before launch: 535216', 1 => 'after: 3071272', 2 => 'diff: 2536056'), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'app', 'datetime' => class Monolog\DateTimeImmutable { private $useMicroseconds = TRUE; public $date = '2020-05-17 10:51:31.608796'; public $timezone_type = 3; public $timezone = 'Europe/Moscow' }, 'extra' => array ())) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Logger.php:323
+   10.9131    3073560     +784           -> Monolog\Handler\StreamHandler->isHandling($record = array ('message' => 'memory usage', 'context' => array (0 => 'before launch: 535216', 1 => 'after: 3071272', 2 => 'diff: 2536056'), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'app', 'datetime' => class Monolog\DateTimeImmutable { private $useMicroseconds = TRUE; public $date = '2020-05-17 10:51:31.608796'; public $timezone_type = 3; public $timezone = 'Europe/Moscow' }, 'extra' => array ())) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Handler\AbstractProcessingHandler.php:32
+   10.9131    3073560                    >=> TRUE
+   10.9131    3073560       +0           -> Monolog\Handler\StreamHandler->getFormatter() W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Handler\AbstractProcessingHandler.php:40
+   10.9131    3073560                    >=> class Monolog\Formatter\LineFormatter { protected $format = '[%datetime%] %channel%.%level_name%: %message% %context% %extra%\n'; protected $allowInlineLineBreaks = FALSE; protected $ignoreEmptyContextAndExtra = FALSE; protected $includeStacktraces = NULL; protected $dateFormat = 'Y-m-d\\TH:i:sP'; protected $maxNormalizeDepth = 9; protected $maxNormalizeItemCount = 1000; private ${Monolog\Formatter\NormalizerFormatter}jsonEncodeOptions = 1344 }
+   10.9131    3073560       +0           -> Monolog\Formatter\LineFormatter->format($record = array ('message' => 'memory usage', 'context' => array (0 => 'before launch: 535216', 1 => 'after: 3071272', 2 => 'diff: 2536056'), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'app', 'datetime' => class Monolog\DateTimeImmutable { private $useMicroseconds = TRUE; public $date = '2020-05-17 10:51:31.608796'; public $timezone_type = 3; public $timezone = 'Europe/Moscow' }, 'extra' => array ())) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Handler\AbstractProcessingHandler.php:40
+   10.9132    3073560       +0             -> Monolog\Formatter\LineFormatter->format($record = array ('message' => 'memory usage', 'context' => array (0 => 'before launch: 535216', 1 => 'after: 3071272', 2 => 'diff: 2536056'), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'app', 'datetime' => class Monolog\DateTimeImmutable { private $useMicroseconds = TRUE; public $date = '2020-05-17 10:51:31.608796'; public $timezone_type = 3; public $timezone = 'Europe/Moscow' }, 'extra' => array ())) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:70
+   10.9133    3073560       +0               -> Monolog\Formatter\LineFormatter->normalize($data = array ('message' => 'memory usage', 'context' => array (0 => 'before launch: 535216', 1 => 'after: 3071272', 2 => 'diff: 2536056'), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'app', 'datetime' => class Monolog\DateTimeImmutable { private $useMicroseconds = TRUE; public $date = '2020-05-17 10:51:31.608796'; public $timezone_type = 3; public $timezone = 'Europe/Moscow' }, 'extra' => array ()), $depth = ???) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:49
+   10.9133    3073560       +0                 -> is_scalar(array ('message' => 'memory usage', 'context' => array (0 => 'before launch: 535216', 1 => 'after: 3071272', 2 => 'diff: 2536056'), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'app', 'datetime' => class Monolog\DateTimeImmutable { private $useMicroseconds = TRUE; public $date = '2020-05-17 10:51:31.608796'; public $timezone_type = 3; public $timezone = 'Europe/Moscow' }, 'extra' => array ())) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:118
+   10.9134    3073560                          >=> FALSE
+   10.9134    3073560       +0                 -> is_array(array ('message' => 'memory usage', 'context' => array (0 => 'before launch: 535216', 1 => 'after: 3071272', 2 => 'diff: 2536056'), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'app', 'datetime' => class Monolog\DateTimeImmutable { private $useMicroseconds = TRUE; public $date = '2020-05-17 10:51:31.608796'; public $timezone_type = 3; public $timezone = 'Europe/Moscow' }, 'extra' => array ())) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:131
+   10.9134    3073560                          >=> TRUE
+   10.9134    3073560       +0                 -> Monolog\Formatter\LineFormatter->normalize($data = 'memory usage', $depth = 1) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:141
+   10.9135    3073560       +0                   -> is_scalar('memory usage') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:118
+   10.9135    3073560                            >=> TRUE
+   10.9135    3073560       +0                   -> is_float('memory usage') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:119
+   10.9135    3073560                            >=> FALSE
+   10.9135    3073560                          >=> 'memory usage'
+   10.9135    3073936     +376                 -> Monolog\Formatter\LineFormatter->normalize($data = array (0 => 'before launch: 535216', 1 => 'after: 3071272', 2 => 'diff: 2536056'), $depth = 1) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:141
+   10.9136    3073936       +0                   -> is_scalar(array (0 => 'before launch: 535216', 1 => 'after: 3071272', 2 => 'diff: 2536056')) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:118
+   10.9136    3073936                            >=> FALSE
+   10.9136    3073936       +0                   -> is_array(array (0 => 'before launch: 535216', 1 => 'after: 3071272', 2 => 'diff: 2536056')) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:131
+   10.9136    3073936                            >=> TRUE
+   10.9137    3073936       +0                   -> Monolog\Formatter\LineFormatter->normalize($data = 'before launch: 535216', $depth = 2) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:141
+   10.9137    3073936       +0                     -> is_scalar('before launch: 535216') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:118
+   10.9137    3073936                              >=> TRUE
+   10.9137    3073936       +0                     -> is_float('before launch: 535216') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:119
+   10.9138    3073936                              >=> FALSE
+   10.9138    3073936                            >=> 'before launch: 535216'
+   10.9138    3074312     +376                   -> Monolog\Formatter\LineFormatter->normalize($data = 'after: 3071272', $depth = 2) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:141
+   10.9138    3074312       +0                     -> is_scalar('after: 3071272') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:118
+   10.9138    3074312                              >=> TRUE
+   10.9138    3074312       +0                     -> is_float('after: 3071272') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:119
+   10.9139    3074312                              >=> FALSE
+   10.9139    3074312                            >=> 'after: 3071272'
+   10.9139    3074312       +0                   -> Monolog\Formatter\LineFormatter->normalize($data = 'diff: 2536056', $depth = 2) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:141
+   10.9139    3074312       +0                     -> is_scalar('diff: 2536056') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:118
+   10.9139    3074312                              >=> TRUE
+   10.9139    3074312       +0                     -> is_float('diff: 2536056') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:119
+   10.9140    3074312                              >=> FALSE
+   10.9140    3074312                            >=> 'diff: 2536056'
+   10.9140    3074312                          >=> array (0 => 'before launch: 535216', 1 => 'after: 3071272', 2 => 'diff: 2536056')
+   10.9140    3074312       +0                 -> Monolog\Formatter\LineFormatter->normalize($data = 100, $depth = 1) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:141
+   10.9141    3074312       +0                   -> is_scalar(100) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:118
+   10.9141    3074312                            >=> TRUE
+   10.9141    3074312       +0                   -> is_float(100) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:119
+   10.9141    3074312                            >=> FALSE
+   10.9141    3074312                          >=> 100
+   10.9142    3074312       +0                 -> Monolog\Formatter\LineFormatter->normalize($data = 'DEBUG', $depth = 1) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:141
+   10.9142    3074312       +0                   -> is_scalar('DEBUG') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:118
+   10.9142    3074312                            >=> TRUE
+   10.9142    3074312       +0                   -> is_float('DEBUG') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:119
+   10.9142    3074312                            >=> FALSE
+   10.9143    3074312                          >=> 'DEBUG'
+   10.9143    3074312       +0                 -> Monolog\Formatter\LineFormatter->normalize($data = 'app', $depth = 1) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:141
+   10.9143    3074312       +0                   -> is_scalar('app') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:118
+   10.9143    3074312                            >=> TRUE
+   10.9144    3074312       +0                   -> is_float('app') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:119
+   10.9144    3074312                            >=> FALSE
+   10.9144    3074312                          >=> 'app'
+   10.9144    3074312       +0                 -> Monolog\Formatter\LineFormatter->normalize($data = class Monolog\DateTimeImmutable { private $useMicroseconds = TRUE; public $date = '2020-05-17 10:51:31.608796'; public $timezone_type = 3; public $timezone = 'Europe/Moscow' }, $depth = 1) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:141
+   10.9145    3074312       +0                   -> is_scalar(class Monolog\DateTimeImmutable { private $useMicroseconds = TRUE; public $date = '2020-05-17 10:51:31.608796'; public $timezone_type = 3; public $timezone = 'Europe/Moscow' }) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:118
+   10.9145    3074312                            >=> FALSE
+   10.9145    3074312       +0                   -> is_array(class Monolog\DateTimeImmutable { private $useMicroseconds = TRUE; public $date = '2020-05-17 10:51:31.608796'; public $timezone_type = 3; public $timezone = 'Europe/Moscow' }) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:131
+   10.9145    3074312                            >=> FALSE
+   10.9145    3074312       +0                   -> Monolog\Formatter\LineFormatter->formatDate($date = class Monolog\DateTimeImmutable { private $useMicroseconds = TRUE; public $date = '2020-05-17 10:51:31.608796'; public $timezone_type = 3; public $timezone = 'Europe/Moscow' }) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:148
+   10.9146    3074312       +0                     -> Monolog\DateTimeImmutable->__toString() W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:241
+   10.9146    3074312       +0                       -> Monolog\DateTimeImmutable->jsonSerialize() W:\domains\localhost\vendor\monolog\monolog\src\Monolog\DateTimeImmutable.php:47
+   10.9146    3074312       +0                         -> Monolog\DateTimeImmutable->format('Y-m-d\\TH:i:s.uP') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\DateTimeImmutable.php:39
+   10.9146    3074568                                  >=> '2020-05-17T10:51:31.608796+03:00'
+   10.9147    3074568                                >=> '2020-05-17T10:51:31.608796+03:00'
+   10.9147    3074568                              >=> '2020-05-17T10:51:31.608796+03:00'
+   10.9147    3074568                            >=> '2020-05-17T10:51:31.608796+03:00'
+   10.9147    3074568                          >=> '2020-05-17T10:51:31.608796+03:00'
+   10.9148    3074568     +256                 -> Monolog\Formatter\LineFormatter->normalize($data = array (), $depth = 1) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:141
+   10.9148    3074568       +0                   -> is_scalar(array ()) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:118
+   10.9148    3074568                            >=> FALSE
+   10.9148    3074568       +0                   -> is_array(array ()) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:131
+   10.9148    3074568                            >=> TRUE
+   10.9149    3074568                          >=> array ()
+   10.9149    3074568                        >=> array ('message' => 'memory usage', 'context' => array (0 => 'before launch: 535216', 1 => 'after: 3071272', 2 => 'diff: 2536056'), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'app', 'datetime' => '2020-05-17T10:51:31.608796+03:00', 'extra' => array ())
+   10.9150    3074568                      >=> array ('message' => 'memory usage', 'context' => array (0 => 'before launch: 535216', 1 => 'after: 3071272', 2 => 'diff: 2536056'), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'app', 'datetime' => '2020-05-17T10:51:31.608796+03:00', 'extra' => array ())
+   10.9150    3074608      +40             -> strpos('[%datetime%] %channel%.%level_name%: %message% %context% %extra%\n', '%context.0%') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:82
+   10.9150    3074608                      >=> FALSE
+   10.9150    3074608       +0             -> strpos('[%datetime%] %channel%.%level_name%: %message% %context% %extra%\n', '%context.1%') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:82
+   10.9150    3074608                      >=> FALSE
+   10.9150    3074608       +0             -> strpos('[%datetime%] %channel%.%level_name%: %message% %context% %extra%\n', '%context.2%') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:82
+   10.9151    3074608                      >=> FALSE
+   10.9151    3074608       +0             -> strpos('[%datetime%] %channel%.%level_name%: %message% %context% %extra%\n', '%message%') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:101
+   10.9151    3074608                      >=> 37
+   10.9151    3074608       +0             -> Monolog\Formatter\LineFormatter->stringify($value = 'memory usage') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:102
+   10.9151    3074608       +0               -> Monolog\Formatter\LineFormatter->convertToString($data = 'memory usage') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:126
+   10.9151    3074608       +0                 -> is_bool('memory usage') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:147
+   10.9152    3074608                          >=> FALSE
+   10.9152    3074608       +0                 -> is_scalar('memory usage') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:151
+   10.9152    3074608                          >=> TRUE
+   10.9152    3074608                        >=> 'memory usage'
+   10.9152    3074608       +0               -> Monolog\Formatter\LineFormatter->replaceNewlines($str = 'memory usage') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:126
+   10.9152    3074608       +0                 -> str_replace(array (0 => '\r\n', 1 => '\r', 2 => '\n'), ' ', 'memory usage') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:168
+   10.9153    3074608                          >=> 'memory usage'
+   10.9153    3074608                        >=> 'memory usage'
+   10.9153    3074608                      >=> 'memory usage'
+   10.9153    3074608       +0             -> str_replace('%message%', 'memory usage', '[%datetime%] %channel%.%level_name%: %message% %context% %extra%\n') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:102
+   10.9153    3074720                      >=> '[%datetime%] %channel%.%level_name%: memory usage %context% %extra%\n'
+   10.9153    3074720     +112             -> strpos('[%datetime%] %channel%.%level_name%: memory usage %context% %extra%\n', '%context%') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:101
+   10.9154    3074720                      >=> 50
+   10.9154    3074720       +0             -> Monolog\Formatter\LineFormatter->stringify($value = array (0 => 'before launch: 535216', 1 => 'after: 3071272', 2 => 'diff: 2536056')) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:102
+   10.9154    3074720       +0               -> Monolog\Formatter\LineFormatter->convertToString($data = array (0 => 'before launch: 535216', 1 => 'after: 3071272', 2 => 'diff: 2536056')) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:126
+   10.9154    3074720       +0                 -> is_bool(array (0 => 'before launch: 535216', 1 => 'after: 3071272', 2 => 'diff: 2536056')) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:147
+   10.9154    3074720                          >=> FALSE
+   10.9154    3074720       +0                 -> is_scalar(array (0 => 'before launch: 535216', 1 => 'after: 3071272', 2 => 'diff: 2536056')) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:151
+   10.9155    3074720                          >=> FALSE
+   10.9155    3074720       +0                 -> Monolog\Formatter\LineFormatter->toJson($data = array (0 => 'before launch: 535216', 1 => 'after: 3071272', 2 => 'diff: 2536056'), $ignoreErrors = TRUE) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:155
+   10.9155    3074720       +0                   -> Monolog\Utils::jsonEncode($data = array (0 => 'before launch: 535216', 1 => 'after: 3071272', 2 => 'diff: 2536056'), $encodeFlags = 1344, $ignoreErrors = TRUE) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:233
+   10.9155    3074720       +0                     -> json_encode(array (0 => 'before launch: 535216', 1 => 'after: 3071272', 2 => 'diff: 2536056'), 1344) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Utils.php:53
+   10.9155    3074976                              >=> '["before launch: 535216","after: 3071272","diff: 2536056"]'
+   10.9156    3074976                            >=> '["before launch: 535216","after: 3071272","diff: 2536056"]'
+   10.9156    3074976                          >=> '["before launch: 535216","after: 3071272","diff: 2536056"]'
+   10.9156    3074976                        >=> '["before launch: 535216","after: 3071272","diff: 2536056"]'
+   10.9156    3074976     +256               -> Monolog\Formatter\LineFormatter->replaceNewlines($str = '["before launch: 535216","after: 3071272","diff: 2536056"]') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:126
+   10.9156    3074976       +0                 -> str_replace(array (0 => '\r\n', 1 => '\r', 2 => '\n'), ' ', '["before launch: 535216","after: 3071272","diff: 2536056"]') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:168
+   10.9157    3074976                          >=> '["before launch: 535216","after: 3071272","diff: 2536056"]'
+   10.9157    3074976                        >=> '["before launch: 535216","after: 3071272","diff: 2536056"]'
+   10.9157    3074976                      >=> '["before launch: 535216","after: 3071272","diff: 2536056"]'
+   10.9157    3074976       +0             -> str_replace('%context%', '["before launch: 535216","after: 3071272","diff: 2536056"]', '[%datetime%] %channel%.%level_name%: memory usage %context% %extra%\n') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:102
+   10.9158    3075136                      >=> '[%datetime%] %channel%.%level_name%: memory usage ["before launch: 535216","after: 3071272","diff: 2536056"] %extra%\n'
+   10.9158    3074760     -216             -> strpos('[%datetime%] %channel%.%level_name%: memory usage ["before launch: 535216","after: 3071272","diff: 2536056"] %extra%\n', '%level%') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:101
+   10.9158    3074760                      >=> FALSE
+   10.9158    3074768       +8             -> strpos('[%datetime%] %channel%.%level_name%: memory usage ["before launch: 535216","after: 3071272","diff: 2536056"] %extra%\n', '%level_name%') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:101
+   10.9158    3074768                      >=> 23
+   10.9158    3074768       +0             -> Monolog\Formatter\LineFormatter->stringify($value = 'DEBUG') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:102
+   10.9158    3074768       +0               -> Monolog\Formatter\LineFormatter->convertToString($data = 'DEBUG') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:126
+   10.9159    3074768       +0                 -> is_bool('DEBUG') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:147
+   10.9159    3074768                          >=> FALSE
+   10.9159    3074768       +0                 -> is_scalar('DEBUG') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:151
+   10.9159    3074768                          >=> TRUE
+   10.9159    3074768                        >=> 'DEBUG'
+   10.9159    3074768       +0               -> Monolog\Formatter\LineFormatter->replaceNewlines($str = 'DEBUG') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:126
+   10.9160    3074768       +0                 -> str_replace(array (0 => '\r\n', 1 => '\r', 2 => '\n'), ' ', 'DEBUG') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:168
+   10.9160    3074768                          >=> 'DEBUG'
+   10.9160    3074768                        >=> 'DEBUG'
+   10.9160    3074768                      >=> 'DEBUG'
+   10.9160    3074768       +0             -> str_replace('%level_name%', 'DEBUG', '[%datetime%] %channel%.%level_name%: memory usage ["before launch: 535216","after: 3071272","diff: 2536056"] %extra%\n') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:102
+   10.9161    3074928                      >=> '[%datetime%] %channel%.DEBUG: memory usage ["before launch: 535216","after: 3071272","diff: 2536056"] %extra%\n'
+   10.9161    3074768       +0             -> strpos('[%datetime%] %channel%.DEBUG: memory usage ["before launch: 535216","after: 3071272","diff: 2536056"] %extra%\n', '%channel%') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:101
+   10.9161    3074768                      >=> 13
+   10.9161    3074768       +0             -> Monolog\Formatter\LineFormatter->stringify($value = 'app') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:102
+   10.9161    3074768       +0               -> Monolog\Formatter\LineFormatter->convertToString($data = 'app') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:126
+   10.9161    3074768       +0                 -> is_bool('app') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:147
+   10.9161    3074768                          >=> FALSE
+   10.9162    3074768       +0                 -> is_scalar('app') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:151
+   10.9162    3074768                          >=> TRUE
+   10.9162    3074768                        >=> 'app'
+   10.9162    3074768       +0               -> Monolog\Formatter\LineFormatter->replaceNewlines($str = 'app') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:126
+   10.9162    3074768       +0                 -> str_replace(array (0 => '\r\n', 1 => '\r', 2 => '\n'), ' ', 'app') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:168
+   10.9162    3074768                          >=> 'app'
+   10.9163    3074768                        >=> 'app'
+   10.9163    3074768                      >=> 'app'
+   10.9163    3074768       +0             -> str_replace('%channel%', 'app', '[%datetime%] %channel%.DEBUG: memory usage ["before launch: 535216","after: 3071272","diff: 2536056"] %extra%\n') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:102
+   10.9163    3074928                      >=> '[%datetime%] app.DEBUG: memory usage ["before launch: 535216","after: 3071272","diff: 2536056"] %extra%\n'
+   10.9163    3074768       +0             -> strpos('[%datetime%] app.DEBUG: memory usage ["before launch: 535216","after: 3071272","diff: 2536056"] %extra%\n', '%datetime%') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:101
+   10.9164    3074768                      >=> 1
+   10.9164    3074768       +0             -> Monolog\Formatter\LineFormatter->stringify($value = '2020-05-17T10:51:31.608796+03:00') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:102
+   10.9164    3074768       +0               -> Monolog\Formatter\LineFormatter->convertToString($data = '2020-05-17T10:51:31.608796+03:00') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:126
+   10.9164    3074768       +0                 -> is_bool('2020-05-17T10:51:31.608796+03:00') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:147
+   10.9164    3074768                          >=> FALSE
+   10.9164    3074768       +0                 -> is_scalar('2020-05-17T10:51:31.608796+03:00') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:151
+   10.9164    3074768                          >=> TRUE
+   10.9165    3074768                        >=> '2020-05-17T10:51:31.608796+03:00'
+   10.9165    3074768       +0               -> Monolog\Formatter\LineFormatter->replaceNewlines($str = '2020-05-17T10:51:31.608796+03:00') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:126
+   10.9165    3074768       +0                 -> str_replace(array (0 => '\r\n', 1 => '\r', 2 => '\n'), ' ', '2020-05-17T10:51:31.608796+03:00') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:168
+   10.9165    3074768                          >=> '2020-05-17T10:51:31.608796+03:00'
+   10.9165    3074768                        >=> '2020-05-17T10:51:31.608796+03:00'
+   10.9166    3074768                      >=> '2020-05-17T10:51:31.608796+03:00'
+   10.9166    3074768       +0             -> str_replace('%datetime%', '2020-05-17T10:51:31.608796+03:00', '[%datetime%] app.DEBUG: memory usage ["before launch: 535216","after: 3071272","diff: 2536056"] %extra%\n') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:102
+   10.9166    3074928                      >=> '[2020-05-17T10:51:31.608796+03:00] app.DEBUG: memory usage ["before launch: 535216","after: 3071272","diff: 2536056"] %extra%\n'
+   10.9166    3074760       -8             -> strpos('[2020-05-17T10:51:31.608796+03:00] app.DEBUG: memory usage ["before launch: 535216","after: 3071272","diff: 2536056"] %extra%\n', '%extra%') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:101
+   10.9166    3074760                      >=> 118
+   10.9166    3074760       +0             -> Monolog\Formatter\LineFormatter->stringify($value = array ()) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:102
+   10.9166    3074760       +0               -> Monolog\Formatter\LineFormatter->convertToString($data = array ()) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:126
+   10.9167    3074760       +0                 -> is_bool(array ()) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:147
+   10.9167    3074760                          >=> FALSE
+   10.9167    3074760       +0                 -> is_scalar(array ()) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:151
+   10.9167    3074760                          >=> FALSE
+   10.9167    3074760       +0                 -> Monolog\Formatter\LineFormatter->toJson($data = array (), $ignoreErrors = TRUE) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:155
+   10.9167    3074760       +0                   -> Monolog\Utils::jsonEncode($data = array (), $encodeFlags = 1344, $ignoreErrors = TRUE) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\NormalizerFormatter.php:233
+   10.9167    3074760       +0                     -> json_encode(array (), 1344) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Utils.php:53
+   10.9168    3075016                              >=> '[]'
+   10.9168    3075016                            >=> '[]'
+   10.9168    3075016                          >=> '[]'
+   10.9168    3075016                        >=> '[]'
+   10.9168    3075016     +256               -> Monolog\Formatter\LineFormatter->replaceNewlines($str = '[]') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:126
+   10.9169    3075016       +0                 -> str_replace(array (0 => '\r\n', 1 => '\r', 2 => '\n'), ' ', '[]') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:168
+   10.9169    3075016                          >=> '[]'
+   10.9169    3075016                        >=> '[]'
+   10.9169    3075016                      >=> '[]'
+   10.9169    3075016       +0             -> str_replace('%extra%', '[]', '[2020-05-17T10:51:31.608796+03:00] app.DEBUG: memory usage ["before launch: 535216","after: 3071272","diff: 2536056"] %extra%\n') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:102
+   10.9170    3075176                      >=> '[2020-05-17T10:51:31.608796+03:00] app.DEBUG: memory usage ["before launch: 535216","after: 3071272","diff: 2536056"] []\n'
+   10.9170    3074728     -288             -> strpos('[2020-05-17T10:51:31.608796+03:00] app.DEBUG: memory usage ["before launch: 535216","after: 3071272","diff: 2536056"] []\n', '%') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Formatter\LineFormatter.php:107
+   10.9170    3074728                      >=> FALSE
+   10.9171    3073720                    >=> '[2020-05-17T10:51:31.608796+03:00] app.DEBUG: memory usage ["before launch: 535216","after: 3071272","diff: 2536056"] []\n'
+   10.9171    3074096     -632           -> Monolog\Handler\StreamHandler->write($record = array ('message' => 'memory usage', 'context' => array (0 => 'before launch: 535216', 1 => 'after: 3071272', 2 => 'diff: 2536056'), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'app', 'datetime' => class Monolog\DateTimeImmutable { private $useMicroseconds = TRUE; public $date = '2020-05-17 10:51:31.608796'; public $timezone_type = 3; public $timezone = 'Europe/Moscow' }, 'extra' => array (), 'formatted' => '[2020-05-17T10:51:31.608796+03:00] app.DEBUG: memory usage ["before launch: 535216","after: 3071272","diff: 2536056"] []\n')) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Handler\AbstractProcessingHandler.php:42
+   10.9171    3074096       +0             -> is_resource(resource(109) of type (stream)) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Handler\StreamHandler.php:95
+   10.9171    3074096                      >=> TRUE
+   10.9172    3074096       +0             -> Monolog\Handler\StreamHandler->streamWrite($stream = resource(109) of type (stream), $record = array ('message' => 'memory usage', 'context' => array (0 => 'before launch: 535216', 1 => 'after: 3071272', 2 => 'diff: 2536056'), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'app', 'datetime' => class Monolog\DateTimeImmutable { private $useMicroseconds = TRUE; public $date = '2020-05-17 10:51:31.608796'; public $timezone_type = 3; public $timezone = 'Europe/Moscow' }, 'extra' => array (), 'formatted' => '[2020-05-17T10:51:31.608796+03:00] app.DEBUG: memory usage ["before launch: 535216","after: 3071272","diff: 2536056"] []\n')) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Handler\StreamHandler.php:119
+   10.9172    3074096       +0               -> fwrite(resource(109) of type (stream), '[2020-05-17T10:51:31.608796+03:00] app.DEBUG: memory usage ["before launch: 535216","after: 3071272","diff: 2536056"] []\n') W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Handler\StreamHandler.php:133
+   10.9172    3074096                        >=> 121
+   10.9173    3073560                  >=> FALSE
+   10.9173    3073560     -536         -> next(array (0 => class Monolog\Handler\StreamHandler { protected $stream = resource(109) of type (stream); protected $url = 'log/app.log'; private $errorMessage = NULL; protected $filePermission = NULL; protected $useLocking = FALSE; private $dirCreated = TRUE; protected $level = 100; protected $bubble = TRUE; protected $processors = array (); protected $formatter = class Monolog\Formatter\LineFormatter { protected $format = '[%datetime%] %channel%.%level_name%: %message% %context% %extra%\n'; protected $allowInlineLineBreaks = FALSE; protected $ignoreEmptyContextAndExtra = FALSE; protected $includeStacktraces = NULL; protected $dateFormat = 'Y-m-d\\TH:i:sP'; protected $maxNormalizeDepth = 9; protected $maxNormalizeItemCount = 1000; private ${Monolog\Formatter\NormalizerFormatter}jsonEncodeOptions = 1344 } })) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Logger.php:327
+   10.9173    3073560                  >=> NULL
+   10.9173    3073560       +0         -> current(array (0 => class Monolog\Handler\StreamHandler { protected $stream = resource(109) of type (stream); protected $url = 'log/app.log'; private $errorMessage = NULL; protected $filePermission = NULL; protected $useLocking = FALSE; private $dirCreated = TRUE; protected $level = 100; protected $bubble = TRUE; protected $processors = array (); protected $formatter = class Monolog\Formatter\LineFormatter { protected $format = '[%datetime%] %channel%.%level_name%: %message% %context% %extra%\n'; protected $allowInlineLineBreaks = FALSE; protected $ignoreEmptyContextAndExtra = FALSE; protected $includeStacktraces = NULL; protected $dateFormat = 'Y-m-d\\TH:i:sP'; protected $maxNormalizeDepth = 9; protected $maxNormalizeItemCount = 1000; private ${Monolog\Formatter\NormalizerFormatter}jsonEncodeOptions = 1344 } })) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Logger.php:322
+   10.9174    3073560                  >=> FALSE
+   10.9174    3071272    -2288     -> xdebug_stop_trace() W:\domains\localhost\public\index.php:49
+   10.9174    3071352
+TRACE END   [2020-05-17 07:51:31]
+

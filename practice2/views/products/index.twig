@@ -1,0 +1,58 @@
+{% extends 'layouts/main.twig' %}
+{% block content %}
+<nav class="nav">
+    <a class="nav__btn" href="/">{{ translate.t('ru', 'home') }}</a>
+    <a class="nav__btn" href="/cart">
+        {{ translate.t('ru', 'to my cart') }}
+    </a>
+</nav>
+
+<table class="table">
+    <thead class="table__head">
+    <tr class="head__row">
+        <th class="head__cell">{{ translate.t('ru', 'id') }}</th>
+        <th class="head__cell">{{ translate.t('ru', 'photo') }}</th>
+        <th class="head__cell">{{ translate.t('ru', 'name') }}</th>
+        <th class="head__cell">{{ translate.t('ru', 'price') }}</th>
+        <th class="head__cell">{{ translate.t('ru', 'material') }}</th>
+        <th class="head__cell">{{ translate.t('ru', 'desc') }}</th>
+        <th class="head__cell">{{ translate.t('ru', 'brand') }}</th>
+
+        <th class="head__cell actions">
+            <i class="btn create far fa-plus-square hide"
+               data-href="?c={{ controller }}&a=save"
+            ></i>
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for product in products %}
+        <tr class="table__row" data-href="/{{ controller }}/view?id={{ product.id }}">
+            <td class="table__cell">{{ product.id }}</td>
+            <td class="table__cell">
+                <img class="product__photo" src="/assets/{{ product.photo }}" alt="product-photo">
+            </td>
+            <td class="table__cell">{{ product.name }}</td>
+            <td class="table__cell">{{ product.price }}</td>
+
+            <td class="table__cell">{{ product.material }}</td>
+            <td class="table__cell">{{ product.desc }}</td>
+            <td class="table__cell">{{ product.brand }}</td>
+
+            <td class="table__cell">
+                <i class="btn update fas fa-pencil-alt hide"
+                   data-href="/{{ controller }}/save?id={{ product.id }}"
+                ></i>
+                <i class="btn delete far fa-trash-alt hide"
+                   data-href="/{{ controller }}/delete?id={{ product.id }}"
+                ></i>
+
+                <i class="btn buy fas fa-shopping-cart"
+                   data-href="/{{ controller }}/buy?id={{ product.id }}"
+                ></i>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

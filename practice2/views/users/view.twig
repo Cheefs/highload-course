@@ -1,0 +1,56 @@
+{% extends "layouts/main.twig" %}
+
+{% block content %}
+<nav class="nav">
+    <a class="nav__btn" href="/">{{ translate.t('ru', 'home') }}</a>
+    <a class="nav__btn" href="/{{ controller }}">
+        {{ translate.t('ru', 'back') }}
+    </a>
+</nav>
+
+<div class="container">
+    <div>
+       <span class="text_bold">
+           {{ translate.t('ru', 'id') }}:
+       </span>
+       <span> {{ user.id }}</span>
+    </div>
+    <div>
+        <span class="text_bold">
+            {{ translate.t('ru', 'username') }}:
+        </span>
+        <span> {{ user.username}} </span>
+    </div>
+    <div>
+        <span class="text_bold">
+            {{ translate.t('ru', 'last name') }}:
+        </span>
+        <span> {{ user.last_name }} </span>
+    </div>
+    <div>
+        <span class="text_bold">
+            {{  translate.t('ru', 'first name') }}:
+        </span>
+        <span> {{ user.first_name }}</span>
+    </div>
+    <div>
+        <span class="text_bold">
+            {{ translate.t('ru', 'second name') }}:
+        </span>
+        <span> {{ user.second_name }} </span>
+    </div>
+    <div>
+        <span class="text_bold">
+            {{ translate.t('ru', 'email') }}:
+        </span>
+        <span> {{ user.email }}</span>
+    </div>
+    <div>
+        <span class="text_bold">
+            {{ translate.t('ru', 'phone') }}:
+        </span>
+        <span> {{ user.phone }}</span>
+    </div>
+</div>
+
+{% endblock %}

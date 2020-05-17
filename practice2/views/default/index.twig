@@ -1,0 +1,15 @@
+{% extends "layouts/main.twig" %}
+
+{% block content %}
+    <nav class="nav">
+        <a class="nav__btn" href="/users">
+            {{ translate.t('ru', 'to users')  }}
+        </a>
+        <a class="nav__btn" href="/products">
+            {{ translate.t('ru', 'to products') }}
+        </a>
+        <a class="nav__btn" href="/cart">
+            {{ translate.t('ru', 'to my cart') }}
+        </a>
+    </nav>
+{% endblock %}

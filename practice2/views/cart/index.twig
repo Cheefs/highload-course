@@ -1,0 +1,63 @@
+{% extends "layouts/main.twig" %}
+
+{% block content %}
+    <nav class="nav">
+        <a class="nav__btn" href="/">{{ translate.t('ru', 'home') }}</a>
+        <a class="nav__btn" href="/products">
+            {{ translate.t('ru', 'to products') }}
+        </a>
+    </nav>
+
+    <hr>
+
+    <h1 class="text_center">{{ translate.t('ru', 'cart') }}</h1>
+
+    {% if cartItems != null %}
+        <h3 class="text_center">
+            <span>
+                {{ translate.t('ru', 'products in cart') }}
+            </span>
+            <span>{{ cartTotal['count'] }}</span>
+        </h3>
+        <h3 class="text_center">
+            <span>
+                {{ translate.t('ru', 'total price') }}
+            </span>
+            <span>{{ cartTotal['price'] }}</span>
+        </h3>
+        <table class="table">
+            <thead class="table__head">
+            <tr class="head__row">
+                <th class="head__cell">{{ translate.t('ru', 'id') }}</th>
+                <th class="head__cell">{{ translate.t('ru', 'name') }}</th>
+                <th class="head__cell">{{ translate.t('ru', 'price') }}</th>
+                <th class="head__cell">{{ translate.t('ru', 'count') }}</th>
+                <th class="head__cell">{{ translate.t('ru', 'photo') }}</th>
+                <th class="head__cell"></th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for item in cartItems %}
+                {% set productInfo = productRepository.find(item.product_id) %}
+                <tr class="table__row text_center text_bold" data-href="/products/view?id={{ productInfo.id }}">
+                    <td class="table__cell">{{ item.id }}</td>
+                    <td class="table__cell">{{ productInfo.name }}</td>
+                    <td class="table__cell">{{ productInfo.price }} x 1</td>
+                    <td class="table__cell">{{ item.count }}</td>
+                    <td class="table__cell">
+                        <img class="product__photo" src="/assets/{{ productInfo.photo }}" alt="product-photo">
+                    </td>
+                    <td class="table__cell">
+                        <i class="btn delete fas fa-trash" data-href="/{{ controller }}/delete?id={{ item.id }}"> x1 </i>
+                        {% if item.count > 1 %}
+                        <i class="btn delete fas fa-trash" data-href="/{{ controller }}/delete?id={{ item.id }}&all=true">  All </i>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <h3 class="text_center"> {{ translate.t('ru', 'cart is empty!') }} </h3>
+    {% endif %}
+{% endblock %}

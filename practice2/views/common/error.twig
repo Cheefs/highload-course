@@ -1,0 +1,13 @@
+{% extends 'layouts/main.twig' %}
+{% block content %}
+<div class="error">
+    <div class="error__message">
+        {{ message }}
+    </div>
+    <nav class="nav">
+        <a class="nav__btn" href="/">
+            {{ translate.t('ru', 'home') }}
+        </a>
+    </nav>
+</div>
+{% endblock %}

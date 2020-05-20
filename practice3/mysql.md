@@ -3,9 +3,9 @@
 
 ### 2) Портировать в него текущую структуру таблиц
 
-`root@user:/home/cheef/Рабочий стол# mysql -u root -p < ./db.sql`
-`root@user:/home/cheef/Рабочий стол# mysql -u root -p skytech < ./explain_models.sql`
-`root@user:/home/cheef/Рабочий стол# mysql -u root -p skytech < ./explain_models_patch_1.sql < ./explain_models_patch_2.sql`
+1. `root@user:/home/cheef/Рабочий стол# mysql -u root -p < ./db.sql`
+2. `root@user:/home/cheef/Рабочий стол# mysql -u root -p skytech < ./explain_models.sql`
+3. `root@user:/home/cheef/Рабочий стол# mysql -u root -p skytech < ./explain_models_patch_1.sql < ./explain_models_patch_2.sql`
 
 ### 3) Какие ситуации, вызывающие рост количества запросов, могут случаться на сервере? Мы рассмотрели не все.
  1. Отсутсвие кеширования данных, которые не меняются, а используются очень часто.

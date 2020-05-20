@@ -1,0 +1,10 @@
+TRACE START [2020-05-17 07:46:40]
+   12.4406    3058520   -13016   -> Monolog\Handler\StreamHandler->__destruct() W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Handler\Handler.php:0
+   12.4407    3058520       +0     -> Monolog\Handler\StreamHandler->close() W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Handler\Handler.php:41
+   12.4407    3058520       +0       -> is_resource(resource(109) of type (stream)) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Handler\StreamHandler.php:63
+   12.4408    3058520                >=> TRUE
+   12.4408    3058520       +0       -> fclose(resource(109) of type (stream)) W:\domains\localhost\vendor\monolog\monolog\src\Monolog\Handler\StreamHandler.php:64
+   12.4409    3058168                >=> TRUE
+   12.4414    2707808
+TRACE END   [2020-05-17 07:46:40]
+

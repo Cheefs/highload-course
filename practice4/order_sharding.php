@@ -1,12 +1,4 @@
 <?php
-/**
-* Order
-*  - id: int
-*  - name: varchar
-*  - date: datetime
-*  - user_id: int
-*  - sum: float
-*/
 
 class Order {
      public $id;
@@ -24,49 +16,71 @@ class Order {
 }
 
 class OrderStorage {
-     protected function runQuery($query, Order $order) {
-          mysql_query($query, ShardingSingleton::getInstance()->getConnection($order));
-     }
+    /**
+     * @param Order $order
+     * @return mysqli
+    **/
+    protected function runQuery(Order $order) {
+        $link = ShardingManager::getConnection($order);
+        mysqli_query( $link, $order );
 
-     public function insert(Order $order) {
-          //добавить запись и вернуть объект с id
-          $this->runQuery("insert lalalal", $order);
-          return mysql_insert_id();
-     }
+        return $link;
+    }
 
-     public function update(Order $order) {
-          //обновить объект
-          $this->runQuery("update lalala", $order);
-     }
+    public function insert(Order $order) {
+        return mysqli_insert_id(
+            $this->runQuery( $order )
+        );
+    }
 
-     public function delete(Order $order) {
-          //удалить объект
-          $this->runQuery("delete lalalal", $order);
-     }
+    public function update(Order $order) {
+        //обновить объект
+        $this->runQuery( $order );
+    }
+
+    public function delete(Order $order) {
+        //удалить объект
+        $this->runQuery( $order );
+    }
 }
 
-class ShardingSingleton {
-    protected static $instance = null;
-    protected $server1;
-    protected $server2;
 
-    protected function __construct() {
-         $this->server1 = mysql_connect('server1', 'user1', 'pass1');
-         $this->server2 = mysql_connect('server2', 'user2', 'pass2');
+/**
+ * 
+ * Как я понял всю суть шардинга, это разделения данных по разным серверам
+ * и в коде мы сами рапределяем кто в какой шард ходит, в нашем примере и во многих
+ * статьях показывают пример по остатку от деления id пользователя, и в соответсвии с ним
+ * выбирают номер шарда. 
+ * 
+ * В моем случае будет $user_id % count( SHARDS_CONFIG );
+ * 
+ * Хорошие стати по шардингу и репликациям, читал пока разбирался в сути задачи:
+ * @link https://ruhighload.com/Горизонтальный+шардинг
+ * @link https://ruhighload.com/Шардинг+и+репликация
+ * @link https://ruhighload.com/Репликация+данных
+ **/
+
+
+class ShardingManager {
+    const DEFAULT_SHARD_INDEX = 0;
+    const SHARDS_CONFIG = [
+        [ 'address' => '10.0.2.7', 'username' => 'root', 'password' => 'root' ],
+        [ 'address' => '10.0.2.8', 'username' => 'root', 'password' => 'root' ]
+    ];
+
+    public static function getConnection( Order $order ) {
+     $shardsCount = count( self::SHARDS_CONFIG );
+     return self::setConfig(
+         self::SHARDS_CONFIG[ $order->user_id % $shardsCount ] ?? self::SHARDS_CONFIG[ self::DEFAULT_SHARD_INDEX ]
+      );
     }
 
-    public static function getInstance() {
-        if (static::$instance == null) {
-            static::$instance = new self();
-        }
-
-        return static::$instance;
-    }
-
-    public function getConnection(Order $order) {
-         $server = $this->server1;
-         if ($order->user_id % 2 == 0) $server = $this->server2; 
-         return $server;
+    protected static function setConfig( array $selectedConfig ) {
+        return mysqli_connect(
+            $selectedConfig['address'] ,
+            $selectedConfig['username'],
+            $selectedConfig['password']
+        );
     }
 }
 

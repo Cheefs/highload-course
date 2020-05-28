@@ -1,0 +1,34 @@
+mysql> show master status;
++------------------+----------+--------------+------------------+-------------------+
+| File             | Position | Binlog_Do_DB | Binlog_Ignore_DB | Executed_Gtid_Set |
++------------------+----------+--------------+------------------+-------------------+
+| mysql-bin.000002 | 87161700 | skytech      |                  |                   |
++------------------+----------+--------------+------------------+-------------------+
+1 row in set (0.00 sec)
+
+mysql> select count(*) from b_sale_basket;
++----------+
+| count(*) |
++----------+
+|   365356 |
++----------+
+1 row in set (0.09 sec)
+
+mysql> select id from b_sale_basket limit 1 ;
++-----+
+| id  |
++-----+
+| 144 |
++-----+
+1 row in set (0.00 sec)
+
+mysql> delete from b_sale_basket where id = 144;
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select count(*) from b_sale_basket;
++----------+
+| count(*) |
++----------+
+|   365355 |
++----------+
+1 row in set (0.08 sec)

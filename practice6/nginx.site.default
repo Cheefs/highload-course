@@ -37,9 +37,9 @@ server {
 	# Don't use them in a production server!
 	#
 	# include snippets/snakeoil.conf;
-	
-	# Добавил каталог с сайтом по пути /home/user/mysite
-	# И сделал на него символическую ссылку в root директории веб сервера
+
+	# Добавил директорию с сайтов по пути /home/user/mysite
+	# и закинул символическую ссылку на него
 	root /var/www/html/mysite;
 
 	# Add index.php to the list if you are using PHP

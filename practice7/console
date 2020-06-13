@@ -1,0 +1,13 @@
+cheef@user:/var/www/localhost$ php index.php
+starting
+confirm order 
+order status 1 
+confirm payment 
+process delivery 
+monitoring delivery 
+order status 2 
+order complete
+stopping
+
+cheef@user:/var/www/localhost$ 
+

@@ -1,0 +1,8 @@
+user@pc:/var/www/localhost$ sudo netstat -tap | grep memcached
+tcp        0      0 localhost:11211         0.0.0.0:*               LISTEN      8368/memcached   
+
+user@pc:/var/www/localhost$ php-fpm7.2 -m | grep memcached
+[28-May-2020 19:48:06] NOTICE: PHP message: PHP Warning:  Module 'redis' already loaded in Unknown on line 0
+memcached
+
+/// Это просто проверка что он установален и прослушивается, а вижу ошибка в Redis ловлю
